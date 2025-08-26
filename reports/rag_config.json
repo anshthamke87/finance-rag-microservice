@@ -1,0 +1,64 @@
+{
+  "retrieval": {
+    "bi_encoder_model_path": "artifacts/bi_encoder_finetuned",
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "ann": {
+      "efSearch": 64,
+      "index_path": "indices/faiss_hnsw/faiss_hnsw_ip.index"
+    },
+    "fusion": {
+      "alpha": 0.4
+    },
+    "ce": {
+      "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+      "top_for_ce": 50
+    },
+    "embeddings": {
+      "file": "artifacts/embeddings/passage_emb_allminilm.npy"
+    },
+    "passages": {
+      "file": "artifacts/passages.parquet"
+    },
+    "splits": {
+      "queries_test": "eval/qrels/fiqa_queries_test.json",
+      "qrels_test": "eval/qrels/fiqa_qrels_test.json"
+    },
+    "metrics": {
+      "n_evaluated_queries": 648,
+      "nDCG@10": 0.3794,
+      "MRR@10": 0.4526,
+      "Recall@100": 0.6247,
+      "config": {
+        "bm25": {
+          "k1": 1.2,
+          "b": 0.75
+        },
+        "ann": {
+          "efSearch": 64
+        },
+        "fusion": {
+          "alpha": 0.4
+        },
+        "ce": {
+          "top_for_ce": 50
+        }
+      }
+    }
+  },
+  "generation": {
+    "model": "google/flan-t5-large",
+    "max_new_tokens": 96,
+    "min_new_tokens": 32,
+    "num_beams": 4,
+    "max_context_tokens": 1400,
+    "top_docs_for_context": 12,
+    "prompt_style": "context-only, abstain with 'I don't know'"
+  },
+  "run": {
+    "use_subset": false,
+    "subset_size": null
+  }
+}

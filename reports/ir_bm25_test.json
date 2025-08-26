@@ -1,0 +1,20 @@
+{
+  "dataset": "BEIR FiQA (test split)",
+  "chunking": {
+    "tokens": 512,
+    "stride": 128
+  },
+  "bm25": "rank-bm25 over passages; doc score = max passage score",
+  "run_file": "/content/drive/MyDrive/finance-rag-microservice/runs/bm25_test.trec",
+  "counts": {
+    "passages": 59018,
+    "test_queries": 648,
+    "test_qrels_pairs": 1706
+  },
+  "metrics": {
+    "n_evaluated_queries": 648,
+    "nDCG@10": 0.1365,
+    "MRR@10": 0.1697,
+    "Recall@100": 0.3203
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "manifest": "reports/rag_run_manifest_noidk.json",
+  "predictions": "runs/rag_predictions_test_cepass_minlen_noidk.jsonl",
+  "eval": "reports/rag_eval_test_cepass_minlen_noidk.json"
+}

@@ -1,0 +1,6 @@
+{
+  "n_predictions": 648,
+  "Support@12": 0.6852,
+  "EvidenceRecall@12": 0.4771,
+  "ContextContainment": 0.9139
+}

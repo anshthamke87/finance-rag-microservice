@@ -1,0 +1,30 @@
+{
+  "dataset": "BEIR FiQA (test split)",
+  "metrics": {
+    "n_evaluated_queries": 648,
+    "nDCG@10": 0.3794,
+    "MRR@10": 0.4526,
+    "Recall@100": 0.6247,
+    "config": {
+      "bm25": {
+        "k1": 1.2,
+        "b": 0.75
+      },
+      "ann": {
+        "efSearch": 64
+      },
+      "fusion": {
+        "alpha": 0.4
+      },
+      "ce": {
+        "top_for_ce": 50
+      }
+    }
+  },
+  "run_file": "/content/drive/MyDrive/finance-rag-microservice/runs/hybrid_ce_finetuned_test.trec",
+  "counts": {
+    "passages": 59018,
+    "test_queries": 648,
+    "test_qrels_pairs": 1706
+  }
+}

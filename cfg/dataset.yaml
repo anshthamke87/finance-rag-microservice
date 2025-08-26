@@ -1,0 +1,6 @@
+name: beir-fiqa-2018
+use_full_corpus: true
+chunk_tokens: 512
+chunk_stride: 128
+seed: 42
+rag_eval_n: 600

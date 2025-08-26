@@ -1,0 +1,28 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$$py.class
+
+# Virtual envs & local tooling
+.venv/
+env/
+.ruff_cache/
+.mypy_cache/
+
+# Notebooks & checkpoints
+*.ipynb
+*.ipynb_checkpoints/
+
+# Git
+.git/
+.gitignore
+
+# OS files
+.DS_Store
+
+# Large runtime artifacts (mounted at runtime instead)
+runs/
+reports/
+artifacts/
+indices/
+eval/

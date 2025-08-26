@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  rag-cpu:
+    profiles: ["cpu"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: finance-rag:latest
+    environment:
+      - FIN_RAG_ROOT=/app
+      - HF_HOME=/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    # Mount your whole project (read-only) so the service can load artifacts/indices
+    volumes:
+      - .:/app:ro
+      # Persist HF model cache between runs to avoid re-downloading
+      - hf_cache:/root/.cache/huggingface
+    restart: unless-stopped
+
+  rag-gpu:
+    profiles: ["gpu"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: finance-rag:gpu
+    environment:
+      - FIN_RAG_ROOT=/app
+      - HF_HOME=/root/.cache/huggingface
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app:ro
+      - hf_cache:/root/.cache/huggingface
+    # Enable GPUs (requires NVIDIA Container Toolkit)
+    gpus: all
+    restart: unless-stopped
+
+volumes:
+  hf_cache:

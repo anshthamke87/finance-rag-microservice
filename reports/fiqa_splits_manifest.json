@@ -1,0 +1,17 @@
+{
+  "docs": 57638,
+  "splits": {
+    "train": {
+      "queries": 5500,
+      "qrels_pairs": 14166
+    },
+    "dev": {
+      "queries": 500,
+      "qrels_pairs": 1238
+    },
+    "test": {
+      "queries": 648,
+      "qrels_pairs": 1706
+    }
+  }
+}

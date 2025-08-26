@@ -1,0 +1,5 @@
+model: google/flan-t5-base
+k_contexts: 4
+max_new_tokens: 256
+temperature: 0.1
+abstain_threshold: 0.2

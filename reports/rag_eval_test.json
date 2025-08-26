@@ -1,0 +1,11 @@
+{
+  "n_predictions": 648,
+  "Support@12": 0.6852,
+  "EvidenceRecall@12": 0.4771,
+  "ContextContainment": 0.9139,
+  "notes": {
+    "support_at_k": "Any top-k doc is relevant per qrels",
+    "evidence_recall_at_k": "Fraction of relevant doc_ids present in top-k retrieved docs",
+    "context_containment": "Share of answer tokens found in concatenated cited passages"
+  }
+}
