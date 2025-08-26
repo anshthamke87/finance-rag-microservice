@@ -3,7 +3,6 @@
 **End-to-end Retrieval-Augmented Generation for Finance QA (FiQA)** — from raw data to a production-ready API.  
 We: **downloaded & cleaned data → built strong hybrid retrieval (BM25 + dense ANN + CE) → fine-tuned the bi-encoder → generated grounded answers with citations (FLAN-T5)** → packaged everything into a **FastAPI** microservice.
 
-> Last updated: _2025-08-26 05:04 UTC_
 
 ---
 
